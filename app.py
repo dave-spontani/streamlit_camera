@@ -11,3 +11,5 @@ usage_list = [i for i in range(20)]
 all_even = return_even(usage_list)
 
 st.write(all_even)
+
+st.write("Changes are almost instantaneously!")
