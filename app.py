@@ -2,17 +2,12 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plot
 
+from importing import return_even
+
 st.title("Try this!")
 st.write("And this!")
-st.write("And maybe even THIS!")
-st.write("Conflict")
-st.write("Also yeah, maybe more?")
-st.write("And also conflict here")
-st.write("Conflict here")
-st.write("Add something here")
-st.write("123")
-st.write("Ellö")
-st.write("Tertium")
-st.write("Spartacus")
-st.write("Elto")
-st.write("And this")
+usage_list = [i for i in range(20)]
+
+all_even = return_even(usage_list)
+
+st.write(all_even)
