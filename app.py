@@ -1,6 +1,6 @@
 import streamlit as st
-from importing import return_even
-from backup import return_odd
+from feature_01 import return_even
+from feature_02 import return_odd
 
 st.title("Try this!")
 
