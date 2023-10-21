@@ -1,6 +1,6 @@
 import streamlit as st
-from feature_01 import return_even
-from feature_02 import return_odd
+from feature_01 import *
+from feature_02 import *
 
 st.title("Try this!")
 
