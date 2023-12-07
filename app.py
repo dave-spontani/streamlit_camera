@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 import pandas as pd
-from feature_01 import return_odd
-from feature_02 import return_even
+from feature_01 import get_data
+from feature_02 import query_builder
 
 st.title("Adverse Effects of Medicine")
 
