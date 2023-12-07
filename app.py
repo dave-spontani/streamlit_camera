@@ -37,6 +37,12 @@ speed_dict = {"Very fast!": "100", "Fast!": "200", "Take your time": "400", "Mot
 
 speed_input = speed_dict[speed_raw]
 
-query = query_builder(start, finish, med, speed_input, sex_input)
+if st.button('Start search!'):
 
-st.write(query)
+    query = query_builder(start, finish, med, speed_input, sex_input)
+
+    res_df, react_dict = get_data(query)
+
+    st.write(react_dict)
+
+    st.write(res_df.head())
