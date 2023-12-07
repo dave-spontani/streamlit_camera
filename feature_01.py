@@ -4,9 +4,9 @@ import requests
 
 
 def get_data(query_input):
-    second_query = 'https://api.fda.gov/drug/event.json?search=(receivedate:[20040101+TO+20231207])+AND+patient.drug.medicinalproduct:"ASPIRIN"&limit=50'
+    #second_query = 'https://api.fda.gov/drug/event.json?search=(receivedate:[20040101+TO+20231207])+AND+patient.drug.medicinalproduct:"ASPIRIN"&limit=50'
 
-    res_02 = requests.get(second_query).json()
+    res_02 = requests.get(query_input).json()
 
     #print(res_02["results"][0])
 
