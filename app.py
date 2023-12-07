@@ -51,13 +51,16 @@ if st.button('Start search!'):
 
     # st.write(res_df.head())
 
-    labels = react_dict.keys()[:10]
-    sizes = react_dict.values()[:10]
-    fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
-            shadow=True, startangle=90)
-    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    labels = react_dict.keys()
+    sizes = react_dict.values()
 
-    st.pyplot(fig1)
+    st.write(labels)
+    st.write(sizes)
+    # fig1, ax1 = plt.subplots()
+    # ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+    #         shadow=True, startangle=90)
+    # ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+    # st.pyplot(fig1)
 
 
