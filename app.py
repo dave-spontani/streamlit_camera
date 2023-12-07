@@ -31,9 +31,11 @@ finish = st.slider('Until when should we search?', min_value = 2015, max_value =
 
 sex_input = st.radio("Male/Female", ["1", "2"], captions = ["Male", "Female"])
 
-speed_input = st.radio("Do you want comprehensive or fast results?",["Very fast!", "Fast!", "Take your time", "Mother of all analysis"])
+speed_raw = st.radio("Do you want comprehensive or fast results?",["Very fast!", "Fast!", "Take your time", "Mother of all analysis"])
 
 speed_dict = {"Very fast!": "100", "Fast!": "200", "Take your time": "400", "Mother of all analysis": "1000"}
+
+speed_input = speed_dict[speed_raw]
 
 query = query_builder(start, finish, med, speed_input, sex_input)
 
