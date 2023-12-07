@@ -1,9 +1,9 @@
-def return_even(n):
-  return [i for i in n if i % 2 == 0]
+###############Query Builder for the FDA Api
+import requests
+##Base query: https://api.fda.gov/drug/event.json
 
+res = requests.get("https://api.fda.gov/drug/event.json?search=receivedate:[20040101+TO+20231207]&count=patient.drug.openfda.pharm_class_epc.exact")
 
-###Writing some more things that will hopefully make this difficult
+print(res)
 
-
-###Other persons brilliant code
-###Other people doing this
+print("Hello")
