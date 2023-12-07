@@ -64,3 +64,7 @@ if st.button('Start search!'):
     st.pyplot(fig1)
 
 
+    if st.button("Do you want to see the full list of symptoms? Click here"):
+        st.write(react_dict)
+
+
