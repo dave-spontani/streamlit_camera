@@ -45,6 +45,6 @@ if st.button('Start search!'):
 
     res_df, react_dict = get_data(query)
 
-    st.write(react_dict)
+    # st.write(react_dict)
 
-    st.write(res_df.head())
+    # st.write(res_df.head())
