@@ -1,6 +1,7 @@
 ########Now we get the concrete calls:
 import pandas as pd 
 import requests
+import streamlit as st
 
 
 def get_data(query_input):
@@ -76,6 +77,6 @@ def get_data(query_input):
     sorted_reactions = sorted(final_react_dict.items(), key=lambda x:x[1], reverse=True)
     final_react_dict_sorted = dict(sorted_reactions )
 
-
+    st.write("Done")
 
     return patients, final_react_dict_sorted
