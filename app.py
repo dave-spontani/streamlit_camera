@@ -22,3 +22,9 @@ print(names_list)
 st.write("Please select the name of the Medicine whose adverse effect you want to know more about:")
 
 med = st.selectbox('How would you like to be contacted?',names_list)
+
+st.write("Please select any other parameters you want to add!")
+
+start = st.slider('How far back shall we search?', 2014, 2022, 1)
+
+stop = st.slider('Until when should we search?', 2014, 2023, 1)
