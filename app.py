@@ -25,6 +25,6 @@ med = st.selectbox('How would you like to be contacted?',names_list)
 
 st.write("Please select any other parameters you want to add!")
 
-start = st.slider('How far back shall we search?', 2014, 2022, 1)
+start = st.slider('How far back shall we search?', min = 2014, max = 2022, step = 1)
 
-stop = st.slider('Until when should we search?', 2014, 2023, 1)
+stop = st.slider('Until when should we search?', min = 2015, max = 2023, step = 1)
