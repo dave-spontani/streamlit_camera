@@ -28,3 +28,5 @@ st.write("Please select any other parameters you want to add!")
 start = st.slider('How far back shall we search?', min_value = 2014, max_value = 2022, step = 1)
 
 stop = st.slider('Until when should we search?', min_value = 2015, max_value = 2023, step = 1)
+
+sex_input = st.radio("Male/Female", ["Male", "Female"]),
