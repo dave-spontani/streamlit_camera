@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 from feature_01 import get_data
 from feature_02 import query_builder
+import matplotlib.pyplot as plt
 
 st.title("Adverse Effects of Medicine")
 
@@ -46,6 +47,17 @@ if st.button('Start search!'):
     res_df, react_dict = get_data(query)
 
 
-    st.write(react_dict)
+    # st.write(react_dict)
 
-    st.write(res_df.head())
+    # st.write(res_df.head())
+
+    labels = react_dict.keys()[:10]
+    sizes = react_dict.values()[:10]
+    fig1, ax1 = plt.subplots()
+    ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+            shadow=True, startangle=90)
+    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+    st.pyplot(fig1)
+
+
