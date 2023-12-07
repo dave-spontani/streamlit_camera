@@ -33,6 +33,8 @@ sex_input = st.radio("Male/Female", ["1", "2"], captions = ["Male", "Female"])
 
 speed_input = st.radio("Do you want comprehensive or fast results?",["Very fast!", "Fast!", "Take your time", "Mother of all analysis"])
 
+speed_dict = {"Very fast!": "100", "Fast!": "200", "Take your time": "400", "Mother of all analysis": "1000"}
+
 query = query_builder(start, finish, med, speed_input, sex_input)
 
 print(query)
