@@ -51,8 +51,8 @@ if st.button('Start search!'):
 
     # st.write(res_df.head())
 
-    labels = react_dict.keys()
-    sizes = react_dict.values()
+    labels = list(react_dict.keys())
+    sizes = list(react_dict.values())
 
     st.write(labels)
     st.write(sizes)
