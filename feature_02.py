@@ -7,10 +7,8 @@ def query_builder(start= "2020", finish = "2023", med = "ASPIRIN", speed_limit="
   product = f'+AND+patient.drug.medicinalproduct:"{med}"'
 
   if sex_input != "":
-  
-    sex_binary = "sex"
 
-    sex = f'+AND+patient.patientsex:{sex_binary}'
+    sex = f'+AND+patient.patientsex:{sex_input}'
   else: 
     sex = ""
 
