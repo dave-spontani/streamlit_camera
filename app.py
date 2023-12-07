@@ -1,25 +1,24 @@
 import streamlit as st
+import requests
+import pandas as pd
 from feature_01 import return_odd
 from feature_02 import return_even
 
-st.title("Try this!")
+st.title("Adverse Effects of Medicine")
 
-first_list = [i for i in range(10)]
+query_url = "https://api.fda.gov/drug/event.json?search=receivedate:[20220101+TO+20231207]&count=patient.drug.medicinalproduct.exact"
 
-all_odd = return_odd(first_list)
+res = requests.get(query_url).json()
 
-all_even = return_even(first_list)
+####Get a full list of all the drug names first. We can use them to look for adverse effects later
 
-st.write(all_odd)
+names_list = []
 
-st.write(all_even)
+for item in range(0,len(res["results"])):
+    names_list.append(res["results"][item]["term"])
 
-st.write("This is a cool update")
-st.write("This is yet another update")
-st.write("You've been gone too long, now we won't have a merge conflict")
+print(names_list)
 
-st.write("Branch changes")
-st.write("And this is the new order")
-st.write("And this")
-st.write("Some changes here ")
-st.write("And we add some changes here too")
+st.write("Please select the name of the Medicine whose adverse effect you want to know more about:")
+
+med = st.selectbox('How would you like to be contacted?',names_list)
