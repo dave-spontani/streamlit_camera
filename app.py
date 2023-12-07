@@ -41,6 +41,8 @@ if st.button('Start search!'):
 
     query = query_builder(start, finish, med, speed_input, sex_input)
 
+    st.write(query)
+
     res_df, react_dict = get_data(query)
 
     st.write(react_dict)
