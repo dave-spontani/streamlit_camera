@@ -1,3 +1,5 @@
+####In this file, we build the query for the api using the inputs from the user#####
+# As a failsafe, we define the inputs with a default value in order to avoid errors
 def query_builder(start= "2020", finish = "2023", med = "ASPIRIN", speed_limit="50", sex_input = ""):
 
   date_range = f"(receivedate:[{start}0101+TO+{finish}1207])"
