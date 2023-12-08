@@ -75,9 +75,13 @@ def get_data(query_input):
     for elem in range(0, len(final_react_count)):
         final_react_dict[final_react_count[elem][0]] = final_react_count[elem][1]
 
-    # Sorted Dictionary in descending order
+    # Sorted Dictionary in descending order. This code was written by ChatGPT
+
+    ##############CODE Written by ChatGPT!#######################
     sorted_reactions = sorted(final_react_dict.items(), key=lambda x:x[1], reverse=True)
     final_react_dict_sorted = dict(sorted_reactions )
+    #############END Code written by CHatGPT#####################
+
 
     st.write("Done")
 
