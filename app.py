@@ -56,6 +56,7 @@ if st.button('Start search!'):
 
     # st.write(labels)
     # st.write(sizes)
+    st.write(f"Out of {speed_input} people, these were the most common adverse effects")
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes[:10], labels=labels[:10], autopct='%1.1f%%',
             shadow=True, startangle=90)
