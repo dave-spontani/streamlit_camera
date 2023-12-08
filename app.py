@@ -34,7 +34,7 @@ start = st.slider('How far back shall we search?', min_value = 2014, max_value =
 finish = st.slider('Until when should we search?', min_value = 2015, max_value = 2023, step = 1)
 
 sex_input = st.radio("Male/Female", ["", "1", "2"], captions = ["Both","Male", "Female"])
-
+# Here, we need to translate the options into numbers:
 speed_raw = st.radio("Do you want comprehensive or fast results?",["Very fast!", "Fast!", "Take your time", "Mother of all analysis"])
 
 speed_dict = {"Very fast!": "250", "Fast!": "500", "Take your time": "1000", "Mother of all analysis": "2000"}
