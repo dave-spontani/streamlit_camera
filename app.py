@@ -1,3 +1,5 @@
+#######This is the main appp file where we call the functions and use them in streamlit######
+# Import the necessary modules:
 import streamlit as st
 import requests
 import pandas as pd
